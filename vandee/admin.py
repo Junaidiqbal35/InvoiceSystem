@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import VandeeDetails
+# from .models import VandeeCdo
+# from .models import VandeeVdo
+# from .models import VandeeVerifyInvoice
+
+
+admin.site.register(VandeeDetails)
