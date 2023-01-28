@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+
+    <div class="search">
+        <form action="{% url 'order_item_list_view' %}" method="get">
+              <input type="search" class="form-control" name="search"
+               placeholder="Search with OrderID ">
+            <button type="submit" class="btn btn-success"> search </button>
+        </form>
+    </div>
+
+
+
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#OrderID</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for order_data in  order_items %}
+    <tr>
+      <td>{{order_data.id}}</td>
+      <td>{{order_data.item_name }}</td>
+      <td>{{order_data.quantity}}</td>
+    </tr>
+  {% endfor %}
+
+
+  </tbody>
+</table>
+    </div>
+
+{% endblock content %}
+

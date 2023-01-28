@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'vandee',
+    'accounts',
+    'crispy_bootstrap5',
+    'vendee',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'InvoiceSystem.urls'
-
+AUTH_USER_MODEL = 'accounts.User'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -70,6 +73,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'InvoiceSystem.wsgi.application'
+
+# crispy forms settings
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 # Database
